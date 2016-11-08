@@ -1,0 +1,23 @@
+{
+    "name": "DiscourseLogin",
+    "version": "1.0",
+    "author": [
+        "davidtaylorhq"
+    ],
+    "url": "https://github.com/davidtaylorhq/",
+    "descriptionmsg": "Sign in with Discourse.",
+    "license-name": "GPLv3",
+    "type": "user identity",
+    "AutoloadClasses": {
+        "DiscourseLoginHooks": "DiscourseLogin.hooks.php"
+    },
+    "Hooks": {
+        "UserLoginForm": [
+            "DiscourseLoginHooks::onUserLoginForm"
+        ],
+        "UserLoadFromSession": [
+            "DiscourseLoginHooks::onUserLoadFromSession"
+        ]
+    },
+    "manifest_version": 1
+}
